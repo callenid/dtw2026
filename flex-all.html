@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex Demo</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+			.controls {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 14px;
+			}
+			button {
+				padding: 8px 10px;
+				cursor: pointer;
+			}
+
+			.flex-demo {
+				display: flex;
+				border: 2px dashed #777;
+				height: 140px;
+				padding: 10px;
+				justify-content: flex-start; /* default */
+				align-items: flex-start; /* default */
+				gap: 10px;
+			}
+			.item {
+				background: orange;
+				padding: 12px;
+				width: 70px;
+				text-align: center;
+				font-weight: bold;
+			}
+			.info {
+				margin-top: 12px;
+			}
+			code {
+				background: #f3f3f3;
+				padding: 2px 6px;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>FLEX: justify-content & align-items</h1>
+
+		<h3>Justify Content (kiri-kanan)</h3>
+		<div class="controls">
+			<button onclick="setJustify('flex-start')">flex-start</button>
+			<button onclick="setJustify('center')">center</button>
+			<button onclick="setJustify('flex-end')">flex-end</button>
+			<button onclick="setJustify('space-between')">space-between</button>
+			<button onclick="setJustify('space-around')">space-around</button>
+			<button onclick="setJustify('space-evenly')">space-evenly</button>
+		</div>
+
+		<h3>Align Items (atas-tengah-bawah)</h3>
+		<div class="controls">
+			<button onclick="setAlign('flex-start')">flex-start</button>
+			<button onclick="setAlign('center')">center</button>
+			<button onclick="setAlign('flex-end')">flex-end</button>
+			<button onclick="setAlign('stretch')">stretch</button>
+		</div>
+
+		<div id="flex" class="flex-demo">
+			<div class="item">A</div>
+			<div class="item">B</div>
+			<div class="item">C</div>
+		</div>
+
+		<div class="info">
+			<p>
+				<b>Current:</b> <code id="jval">justify-content: flex-start</code> |
+				<code id="aval">align-items: flex-start</code>
+			</p>
+			<p>
+				Ingat: <b>justify-content</b> = posisi kiri-kanan, <b>align-items</b> =
+				posisi atas-tengah-bawah.
+			</p>
+		</div>
+
+		<script>
+			const flex = document.getElementById("flex");
+			const jval = document.getElementById("jval");
+			const aval = document.getElementById("aval");
+
+			function setJustify(val) {
+				flex.style.justifyContent = val;
+				jval.textContent = "justify-content: " + val;
+			}
+			function setAlign(val) {
+				flex.style.alignItems = val;
+				aval.textContent = "align-items: " + val;
+			}
+		</script>
+	</body>
+</html>

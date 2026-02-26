@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>03 - Padding vs Margin</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 24px;
+			}
+			.note {
+				background: #f3f3f3;
+				padding: 12px;
+				border-radius: 8px;
+				margin-bottom: 16px;
+			}
+
+			.row {
+				display: flex;
+				gap: 16px;
+			}
+			.panel {
+				width: 50%;
+				border: 2px dashed #aaa;
+				padding: 12px;
+				border-radius: 10px;
+			}
+
+			.box {
+				background: #ffdede;
+				border: 4px solid #333;
+				border-radius: 10px;
+			}
+
+			/* Panel A: Padding */
+			.padding-demo .box {
+				padding: 24px; /* ruang ke DALAM */
+				margin: 0;
+			}
+
+			/* Panel B: Margin */
+			.margin-demo .box {
+				padding: 0;
+				margin: 24px; /* ruang ke LUAR */
+			}
+
+			.label {
+				font-weight: bold;
+				margin-bottom: 8px;
+			}
+			code {
+				background: #eee;
+				padding: 2px 6px;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Padding vs Margin</h1>
+
+		<div class="note">
+			<b>Ingat:</b> <code>padding</code> = jarak isi ke dinding kotak
+			(DALAM).<br />
+			<code>margin</code> = jarak kotak ke elemen lain (LUAR).
+		</div>
+
+		<div class="row">
+			<div class="panel padding-demo">
+				<div class="label">A) Padding: isi menjauh dari border</div>
+				<div class="box">Teks ini jadi “lega” karena ada padding 24px</div>
+				<p>Coba ubah <code>padding: 24px</code> jadi 0 / 50px.</p>
+			</div>
+
+			<div class="panel margin-demo">
+				<div class="label">B) Margin: kotak menjauh dari tepi panel</div>
+				<div class="box">Kotak ini “menjaga jarak” karena margin 24px</div>
+				<p>Coba ubah <code>margin: 24px</code> jadi 0 / 50px.</p>
+			</div>
+		</div>
+	</body>
+</html>

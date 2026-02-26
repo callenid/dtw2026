@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Demo Units: px, %, vw, vh, rem</title>
+		<style>
+			html {
+				font-size: 16px;
+			} /* UBAH: 12px / 20px untuk demo rem */
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+
+			h2 {
+				margin-top: 40px;
+			}
+
+			.section {
+				border: 2px dashed #999;
+				padding: 14px;
+				margin-bottom: 24px;
+			}
+
+			.bar {
+				height: 40px;
+				line-height: 40px;
+				padding-left: 10px;
+				border: 1px solid #333;
+				background: #cce5ff;
+				margin: 8px 0;
+				white-space: nowrap;
+			}
+
+			/* WIDTH DEMO */
+			.px {
+				width: 200px;
+			}
+			.percent {
+				width: 50%;
+			}
+			.vw {
+				width: 50vw;
+			}
+
+			/* HEIGHT DEMO */
+			.vh-box {
+				height: 30vh;
+				background: #ffd1dc;
+				border: 2px solid #333;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 8px 0;
+			}
+
+			/* TEXT DEMO */
+			.px-text {
+				font-size: 24px;
+			}
+			.rem-text {
+				font-size: 1.5rem;
+			} /* ikut root font-size */
+
+			.hint {
+				background: #f3f3f3;
+				padding: 10px;
+				border-radius: 8px;
+				margin-top: 10px;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>DEMO UNIT CSS: px, %, vw, vh, rem (SATU HALAMAN)</h1>
+
+		<p>
+			👉 Coba <b>resize window browser / putar HP</b>.<br />
+			👉 Coba ubah di CSS: <code>html { font-size: 16px; }</code> jadi
+			<code>12px</code> atau <code>20px</code>.
+		</p>
+
+		<div class="section">
+			<h2>1) Width: px vs % vs vw</h2>
+			<div class="bar px">200px (TETAP, tidak ikut layar)</div>
+			<div class="bar percent">50% (ikut lebar container)</div>
+			<div class="bar vw">50vw (ikut lebar layar)</div>
+			<div class="hint">
+				px = ukuran mati • % = ikut parent • vw = ikut layar
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>2) Height: vh (tinggi ikut layar)</h2>
+			<div class="vh-box">Tinggi 30vh (30% tinggi layar)</div>
+			<div class="hint">
+				vh = persentase dari tinggi layar. Cocok buat banner/hero section.
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>3) Font-size: px vs rem</h2>
+			<p class="px-text">Teks 24px (tidak ikut root)</p>
+			<p class="rem-text">Teks 1.5rem (ikut root font-size)</p>
+			<div class="hint">
+				rem = fleksibel & aksesibel (ikut font-size utama di <code>html</code>)
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>4) Kesimpulan Cepat</h2>
+			<ul>
+				<li><b>px</b> → ukuran tetap (icon, border)</li>
+				<li><b>%</b> → ikut ukuran parent</li>
+				<li><b>vw</b> → ikut lebar layar</li>
+				<li><b>vh</b> → ikut tinggi layar</li>
+				<li><b>rem</b> → ikut font utama (responsive & aksesibel)</li>
+			</ul>
+		</div>
+	</body>
+</html>

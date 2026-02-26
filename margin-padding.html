@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Margin vs Padding</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+			.wrapper {
+				border: 2px dashed #777;
+				padding: 10px;
+			}
+
+			.box {
+				background: #cce5ff;
+				border: 3px solid #3399ff;
+				width: 250px;
+			}
+
+			.margin-demo {
+				margin: 30px;
+				padding: 10px;
+			}
+			.padding-demo {
+				margin: 10px;
+				padding: 30px;
+			}
+
+			.note {
+				margin-top: 12px;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>MARGIN vs PADDING</h1>
+
+		<div class="wrapper">
+			<h3>Box 1: Margin besar (jarak luar)</h3>
+			<div class="box margin-demo">Aku punya MARGIN 30px, PADDING 10px</div>
+
+			<h3>Box 2: Padding besar (jarak dalam)</h3>
+			<div class="box padding-demo">Aku punya MARGIN 10px, PADDING 30px</div>
+		</div>
+
+		<p class="note">
+			Margin = jarak antar kotak. Padding = jarak isi ke pinggir kotak.
+		</p>
+	</body>
+</html>

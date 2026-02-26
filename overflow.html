@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Overflow Demo</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+			.controls {
+				display: flex;
+				gap: 8px;
+				margin-bottom: 12px;
+			}
+			button {
+				padding: 8px 10px;
+				cursor: pointer;
+			}
+
+			.box {
+				width: 220px;
+				height: 60px;
+				border: 3px solid red;
+				padding: 8px;
+				overflow: hidden; /* default */
+			}
+			code {
+				background: #f3f3f3;
+				padding: 2px 6px;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>OVERFLOW</h1>
+
+		<div class="controls">
+			<button onclick="setOverflow('hidden')">hidden</button>
+			<button onclick="setOverflow('auto')">auto</button>
+			<button onclick="setOverflow('scroll')">scroll</button>
+		</div>
+
+		<p><b>Current:</b> <code id="oval">overflow: hidden</code></p>
+
+		<div id="obox" class="box">
+			Ini teks panjang banget supaya keluar dari kotak. Kalau overflow hidden,
+			kepotong. Kalau auto, muncul scroll saat perlu. Kalau scroll, scroll
+			selalu ada.
+		</div>
+
+		<script>
+			const obox = document.getElementById("obox");
+			const oval = document.getElementById("oval");
+
+			function setOverflow(val) {
+				obox.style.overflow = val;
+				oval.textContent = "overflow: " + val;
+			}
+		</script>
+	</body>
+</html>

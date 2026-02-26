@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>01 - DIV sebagai Kotak</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 24px;
+			}
+			.note {
+				background: #f3f3f3;
+				padding: 12px;
+				border-radius: 8px;
+			}
+			.wrap {
+				border: 2px dashed #aaa;
+				padding: 12px;
+				margin-top: 16px;
+			}
+
+			.box {
+				padding: 14px;
+				border-radius: 10px;
+				margin: 10px 0;
+			}
+			.header {
+				background: #ffdede;
+			}
+			.content {
+				background: #e8ffde;
+			}
+			.footer {
+				background: #deebff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>DIV = Kotak / Wadah</h1>
+
+		<div class="note">
+			<b>Inti:</b> HTML bikin struktur. <code>div</code> itu wadah (kotak). CSS
+			bikin kotaknya kelihatan & rapi.
+		</div>
+
+		<div class="wrap">
+			<div class="box header">Header (div)</div>
+			<div class="box content">
+				Content (div)
+				<p>Di dalam div bisa ada teks, paragraf, bahkan div lain.</p>
+				<div class="box footer">Ini div di dalam div (nested)</div>
+			</div>
+			<div class="box footer">Footer (div)</div>
+		</div>
+
+		<p>
+			<b>Tugas cepat:</b> ubah teks dan warna background tiap kotak, lalu lihat
+			struktur halaman berubah.
+		</p>
+	</body>
+</html>

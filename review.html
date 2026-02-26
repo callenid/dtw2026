@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Demo Dasar CSS - Semester 2</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+
+			h2 {
+				margin-top: 40px;
+			}
+
+			.box {
+				background: #cce5ff;
+				border: 2px solid #3399ff;
+				padding: 10px;
+				margin: 10px 0;
+			}
+
+			/* FLEX */
+			.flex-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: 2px dashed #999;
+				padding: 10px;
+			}
+
+			.item {
+				background: orange;
+				padding: 10px;
+			}
+
+			/* DISPLAY */
+			.inline {
+				display: inline;
+				background: pink;
+				width: 100px;
+				height: 40px;
+			}
+
+			.inline-block {
+				display: inline-block;
+				background: lightgreen;
+				width: 100px;
+				height: 40px;
+			}
+
+			.block {
+				display: block;
+				background: lightblue;
+				width: 100px;
+				height: 40px;
+			}
+
+			/* OVERFLOW */
+			.overflow-box {
+				width: 150px;
+				height: 50px;
+				border: 2px solid red;
+				overflow: auto;
+			}
+
+			/* GRID */
+			.grid-container {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 10px;
+			}
+
+			.grid-item {
+				background: violet;
+				padding: 20px;
+				text-align: center;
+			}
+
+			/* BOX SIZING */
+			.box-sizing {
+				width: 150px;
+				padding: 20px;
+				border: 5px solid black;
+				box-sizing: border-box;
+				background: yellow;
+			}
+
+			/* VW VH */
+			.vwvh {
+				width: 50vw;
+				height: 20vh;
+				background: lightcoral;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>DEMO DASAR TEKNOLOGI WEB</h1>
+
+		<h2>1. Container (div)</h2>
+		<div class="box">Ini div (wadah)</div>
+
+		<h2>2. Flex (justify-content & align-items)</h2>
+		<div class="flex-container">
+			<div class="item">Menu 1</div>
+			<div class="item">Menu 2</div>
+			<div class="item">Menu 3</div>
+		</div>
+
+		<h2>3. Display: inline, inline-block, block</h2>
+		<span class="inline">inline</span>
+		<span class="inline">inline</span>
+		<br /><br />
+		<span class="inline-block">inline-block</span>
+		<span class="inline-block">inline-block</span>
+		<br /><br />
+		<span class="block">block</span>
+		<span class="block">block</span>
+
+		<h2>4. Margin & Padding</h2>
+		<div class="box">
+			Perhatikan jarak luar (margin) & jarak dalam (padding)
+		</div>
+
+		<h2>5. Divider</h2>
+		<hr />
+
+		<h2>6. Overflow</h2>
+		<div class="overflow-box">
+			Teks ini panjang banget sampai keluar kotak, jadi muncul scroll.
+		</div>
+
+		<h2>7. Grid</h2>
+		<div class="grid-container">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+		</div>
+
+		<h2>8. Box Sizing</h2>
+		<div class="box-sizing">Ukuran tetap 150px walau ada padding</div>
+
+		<h2>9. VW & VH</h2>
+		<div class="vwvh">Lebar 50% layar, tinggi 20% layar</div>
+	</body>
+</html>

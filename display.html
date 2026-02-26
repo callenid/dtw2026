@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Display</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+			.demo {
+				border: 2px dashed #777;
+				padding: 12px;
+				margin: 10px 0 30px;
+			}
+			.label {
+				display: inline-block;
+				width: 140px;
+				font-weight: bold;
+			}
+
+			.inline,
+			.inline-block,
+			.block {
+				background: #ffd1dc;
+				border: 1px solid #333;
+				width: 120px;
+				height: 40px;
+				padding: 6px;
+				margin: 6px;
+			}
+
+			.inline {
+				display: inline;
+			} /* width/height TIDAK terasa */
+			.inline-block {
+				display: inline-block;
+			} /* width/height terasa */
+			.block {
+				display: block;
+			} /* turun baris */
+		</style>
+	</head>
+	<body>
+		<h1>DISPLAY: inline vs inline-block vs block</h1>
+
+		<div class="demo">
+			<span class="label">inline:</span>
+			<span class="inline">A</span>
+			<span class="inline">B</span>
+			<span class="inline">C</span>
+			<p>
+				<i>Catatan: width/height di inline biasanya tidak berpengaruh jelas.</i>
+			</p>
+		</div>
+
+		<div class="demo">
+			<span class="label">inline-block:</span>
+			<span class="inline-block">A</span>
+			<span class="inline-block">B</span>
+			<span class="inline-block">C</span>
+		</div>
+
+		<div class="demo">
+			<span class="label">block:</span>
+			<span class="block">A</span>
+			<span class="block">B</span>
+			<span class="block">C</span>
+		</div>
+	</body>
+</html>

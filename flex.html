@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>02 - Flex Layout</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 24px;
+			}
+			.note {
+				background: #f3f3f3;
+				padding: 12px;
+				border-radius: 8px;
+				margin-bottom: 16px;
+			}
+
+			.menu {
+				border: 2px dashed #aaa;
+				padding: 12px;
+				display: flex; /* KUNCI: */
+			}
+
+			.kiri {
+				background: red;
+				width: 60%; /* kolom kiri */
+				padding: 12px;
+				border-radius: 10px;
+			}
+			.tengah {
+				background: yellow;
+				width: 20%; /* kolom kanan */
+				padding: 12px;
+				border-radius: 10px;
+			}
+			.kanan {
+				background: blue;
+				width: 20%; /* kolom kanan */
+				padding: 12px;
+				border-radius: 10px;
+			}
+
+			.container {
+				border: 2px dashed #aaa;
+				padding: 12px;
+				display: flex; /* KUNCI: */
+				gap: 12px; /* jarak antar kolom */
+			}
+
+			.sidebar {
+				background: #deebff;
+				width: 25%; /* kolom kiri */
+				padding: 12px;
+				border-radius: 10px;
+			}
+
+			.content {
+				background: #e8ffde;
+				width: 75%; /* kolom kanan */
+				padding: 12px;
+				border-radius: 10px;
+			}
+
+			@media (max-width: 700px) {
+				.container {
+					flex-direction: column;
+				}
+				.sidebar,
+				.content {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Flexbox = bikin layout sejajar</h1>
+
+		<div class="note">
+			Coba ganti <code>display: flex</code> jadi
+			<code>display: block</code> lalu lihat perbedaannya. <br />Coba juga ubah
+			<code>width</code> sidebar jadi 30% / 40%.
+		</div>
+
+		<div class="menu">
+			<div class="kiri">
+				<b>Kiri</b>
+			</div>
+
+			<div class="tengah">
+				<b>Tengah</b>
+			</div>
+
+			<div class="kanan">
+				<b>Kanan</b>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="sidebar">
+				<b>Sidebar</b>
+				<ul>
+					<li>Menu 1</li>
+					<li>Menu 2</li>
+					<li>Menu 3</li>
+				</ul>
+			</div>
+
+			<div class="content">
+				<b>Content</b>
+				<p>Ini area konten. Flex membuat sidebar dan content duduk sejajar.</p>
+				<p>
+					Properti penting flex: <code>gap</code>, <code>flex-direction</code>,
+					<code>justify-content</code>, <code>align-items</code>.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

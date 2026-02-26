@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid Demo</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+			.controls {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 14px;
+			}
+			button {
+				padding: 8px 10px;
+				cursor: pointer;
+			}
+
+			.grid-demo {
+				display: grid;
+				gap: 10px;
+				border: 2px dashed #777;
+				padding: 10px;
+				grid-template-columns: repeat(3, 1fr); /* default */
+			}
+			.box {
+				background: #b8e0ff;
+				border: 1px solid #333;
+				padding: 18px;
+				text-align: center;
+				font-weight: bold;
+			}
+			code {
+				background: #f3f3f3;
+				padding: 2px 6px;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>GRID: grid-template-columns</h1>
+
+		<div class="controls">
+			<button onclick="setCols('repeat(2, 1fr)')">2 kolom</button>
+			<button onclick="setCols('repeat(3, 1fr)')">3 kolom</button>
+			<button onclick="setCols('repeat(4, 1fr)')">4 kolom</button>
+			<button onclick="setCols('2fr 1fr 1fr')">2fr 1fr 1fr</button>
+			<button onclick="setCols('100px 200px 100px')">100px 200px 100px</button>
+			<button onclick="setCols('repeat(auto-fit, minmax(120px, 1fr))')">
+				auto-fit responsive
+			</button>
+		</div>
+
+		<p>
+			<b>Current:</b>
+			<code id="cval">grid-template-columns: repeat(3, 1fr)</code>
+		</p>
+
+		<div id="grid" class="grid-demo">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+			<div class="box">7</div>
+			<div class="box">8</div>
+			<div class="box">9</div>
+		</div>
+
+		<script>
+			const grid = document.getElementById("grid");
+			const cval = document.getElementById("cval");
+
+			function setCols(val) {
+				grid.style.gridTemplateColumns = val;
+				cval.textContent = "grid-template-columns: " + val;
+			}
+		</script>
+	</body>
+</html>
